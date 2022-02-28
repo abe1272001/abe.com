@@ -9,6 +9,7 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import { IoLogoGithub } from 'react-icons/io5';
+import Logo from './Logo';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
 	const active = path === href;
@@ -49,7 +50,7 @@ const Navbar = ({ path }) => {
 			>
 				<Flex align="center" mr={5}>
 					<Heading as="h1" size="lg" letterSpacing={'tighter'}>
-						LOGO
+						<Logo />
 					</Heading>
 				</Flex>
 				<Flex
