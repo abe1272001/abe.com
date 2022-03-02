@@ -1,7 +1,13 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { Box, Container } from '@chakra-ui/react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import PugLoader from '../pug-loader';
+const LazyPixelPug = dynamic(() => import('../pixel-pug'), {
+  ssr: false,
+  loading: () => <PugLoader />
+});
 
 const Main = ({ children, router }) => {
 	console.log('router', router);
@@ -15,6 +21,7 @@ const Main = ({ children, router }) => {
 
 			<Navbar path={router.asPath} />
 			<Container maxW="container.md" pt={14}>
+				<LazyPixelPug/>
 				{children}
 				<Footer />
 			</Container>

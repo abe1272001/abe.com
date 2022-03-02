@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { Box, Spinner } from '@chakra-ui/react';
 
 export const PugSpinner = () => (
-	<Spinner size="xl" position="absolute" left="50%" top="50%" />
+	<Spinner size="lg" position="absolute" left="50%" top="50%" />
 );
 
 export const PugContainer = forwardRef(({ children }, ref) => (
@@ -19,3 +19,15 @@ export const PugContainer = forwardRef(({ children }, ref) => (
 		{children}
 	</Box>
 ));
+
+PugContainer.displayName = 'PugContainer';
+
+const Loader = () => {
+  return (
+    <PugContainer>
+      <PugSpinner />
+    </PugContainer>
+  )
+}
+
+export default Loader

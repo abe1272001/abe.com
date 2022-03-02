@@ -9,11 +9,11 @@ www.abe.com
 - Chakra ui
 - Framer-motion
 - SWR
+- Moment.js
 - MongoDB
 - AWS lightsail / linode (ubuntu20.04 LTS) MERN
 - CI/CD?
 - Docker?
-
 ---
 
 ## Introduction
